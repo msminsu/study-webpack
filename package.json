@@ -1,0 +1,25 @@
+{
+  "name": "study-webpack",
+  "version": "1.0.0",
+  "description": "Webpack은 모든 자산을 가져 와서 생산 준비가 완료된 번들로 출력합니다.",
+  "main": "script-1.js",
+  "dependencies": {
+    "webpack-cli": "^3.1.0",
+    "webpack": "^4.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msminsu/study-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msminsu/study-webpack/issues"
+  },
+  "homepage": "https://github.com/msminsu/study-webpack#readme"
+}
