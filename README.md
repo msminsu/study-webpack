@@ -10,15 +10,67 @@ Webpack은 모든 자산을 가져 와서 생산 준비가 완료된 번들로 �
 
 ## branch : step-01
 ~~~c
-   1. $npm init -y : package.json 생성  
+   1. $npm init -y : package.json 자동생성  
    2. $npm install webpack --save-dev
 
    npm view webpack versions
    npm view webpack versions --json
 
    npm i -D webpack@4.18.0  : 해당 버전 설치
+
+
+명령어 직접 입력  >  webpack.config.js (미리설정)
+   webpack ./src/app.js ./dist/app.bundle.js
+   webpack ./src/app.js ./dist/app.bundle.js -p --watch
+   -d: develop 코드 모드
+   -p:  minified 코드 모드
+   --watch :  watch 모드
+
+
+
+webpack.config.js  설정 > package.json 수정 > "scripts" : { "dev" : "webpack -d --watch"}
+$npm run dev
 ~~~
-## branch : step-02
+
+~~~c
+webpack4 는 
+npm i -g webpack webpack-cli 
+npm i -D webpack webpack-cli
+이렇게 webpack webpack-cli 설치해줘야됩니다.
+
+resolve 도 해줘야됩니다.
+~~~
+vscode setting
+node_module, .vscode 폴더 숨기기 : 
+F1 > Workspace setting > excluede files 에 추가 
+
+
+
+
+## branch : step-02 
+### Plugin
+terminal
+~~~c 
+npm i -D webpack-html-plugin
+~~~
+
+webpack.config.js
+~~~c
+var HtmlWebpackPlugin = require('webpack-html-plugin');
+
+module.exports = {
+    entry:'./src/app.js',
+    output: {
+        path:'dist'
+        filename: 'app.bundle.js'
+    },
+    resolve: {
+        modules: ['node_modules'],
+        extensions: ['.js', '.json', '.jsx', '.css'],
+      },
+      plugins:[ new HtmlWebpackPlugin()]
+}
+~~~
 
 ## branch : step-03
 
