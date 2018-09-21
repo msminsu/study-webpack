@@ -87,6 +87,7 @@ npm i -D extract-text-webpack-plugin@next
 
 loaders:'style-loader!css-loader' 문법 변경  ver.1
 use : ['style-loader','css-loader']    ver.2
+
 ~~~
 
 ## branch : step-04
