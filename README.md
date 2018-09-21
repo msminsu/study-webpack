@@ -74,6 +74,20 @@ module.exports = {
 
 
 ## branch : step-03
+### Style CSS SASS loader
+
+~~~c
+npm i css-loader -D  : js 파일에서 load
+npm i style-loader -D : style 파일 링크 시켜줌 
+npm i sass-loader -D : sass파일 변경
+
+npm i extract-text-webpack-plugin -D : css 파일로 떨궈줌
+npm i -D extract-text-webpack-plugin@next
+
+
+loaders:'style-loader!css-loader' 문법 변경  ver.1
+use : ['style-loader','css-loader']    ver.2
+~~~
 
 ## branch : step-04
 
