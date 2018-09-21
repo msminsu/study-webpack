@@ -51,12 +51,12 @@ F1 > Workspace setting > excluede files 에 추가
 ### Plugin
 terminal
 ~~~c 
-npm i -D webpack-html-plugin
+npm i -D html-webpack-plugin
 ~~~
 
 webpack.config.js
 ~~~c
-var HtmlWebpackPlugin = require('webpack-html-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry:'./src/app.js',
